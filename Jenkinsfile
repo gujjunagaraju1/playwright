@@ -39,11 +39,12 @@ pipeline{
             )
 
             }
-        }
+        
         success{
             echo 'Build passed'
         }
         failure{
             echo 'build failure'
         }
+    }
     }
