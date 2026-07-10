@@ -13,6 +13,7 @@ pipeline{
             python3 -m venv ev
             . ev/bin/activate
             pip install -r requirements.txt
+            playwright install
             pytest -v test.py
         '''
     }
