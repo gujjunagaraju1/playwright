@@ -13,7 +13,7 @@ pipeline{
             python3 -m venv ev
             . ev/bin/activate
             pip install -r requirements.txt
-            pytest -v
+            pytest -v test.py
         '''
     }
         }
