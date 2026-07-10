@@ -14,14 +14,32 @@ pipeline{
             . ev/bin/activate
             pip install -r requirements.txt
             playwright install
-            pytest -v test.py
+
         '''
     }
+        }
+        stage('Run Tests'){
+            steps{
+                sh '''
+                . ev/bin/activate
+                mkdir -p allure-results
+                pytest -v test.py --alluredir=allure-results
+                '''
+            }
         }
 
 
     }
     post{
+        always{
+            allure(
+                includeProperties:false,
+                jdk:'',
+                results :[[path:'allure-results']]
+            )
+
+            }
+        }
         success{
             echo 'Build passed'
         }
@@ -29,4 +47,3 @@ pipeline{
             echo 'build failure'
         }
     }
-}
