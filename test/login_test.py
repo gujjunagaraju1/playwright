@@ -16,3 +16,4 @@ with sync_playwright() as p:
     page.goto("https://the-internet.herokuapp.com/basic_auth")
     page.go_back()
     time.sleep(4)
+    print("nit saved")
