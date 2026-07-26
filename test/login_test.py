@@ -5,7 +5,7 @@ import time
 
 #auth for popups
 with sync_playwright() as p:
-    browser=p.chromium.launch(headless=False)
+    browser=p.chromium.launch()
     context=browser.new_context(
         http_credentials={
             "username":"admin",
