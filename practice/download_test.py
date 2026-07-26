@@ -9,3 +9,4 @@ with sync_playwright() as p:
         page.get_by_text("kaneqafile.txt").click()
     download=download_info.value
     download.save_as("kaneqafile.txt")
+    print(download.path())
