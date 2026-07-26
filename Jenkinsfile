@@ -23,7 +23,7 @@ pipeline{
                 sh '''
                 . ev/bin/activate
                 mkdir -p allure-results
-                pytest -v test.py --alluredir=allure-results
+                pytest -v practice/login_test.py --alluredir=allure-results
                 '''
             }
         }
