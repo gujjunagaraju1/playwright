@@ -14,5 +14,6 @@ with sync_playwright() as p:
     print(frame.locator('p').inner_text())
     page.go_back()
     page.get_by_text("Nested Frames").click()
+    print("hi")
 
     time.sleep(4)
