@@ -1,0 +1,3 @@
+Kane AI v4automation — /upload slash-command fixture.
+This small text file is uploaded from local via the "Upload file" command so a
+Local user-variable (FILE_kaneqafile_txt) can carry its VM path into an objective.
